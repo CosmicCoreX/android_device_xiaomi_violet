@@ -49,8 +49,7 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .add_needed('libinput_shim.so'),
-    (   'vendor/lib64/hw/camera.qcom.so',
-        'vendor/lib64/libvidhance.so',): blob_fixup()
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
         .add_needed('libcomparetf2_shim.so'),
     'vendor/etc/camera/camxoverridesettings.txt': blob_fixup()
         .regex_replace('0x10080', '0')
@@ -67,6 +66,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/mediadrm/libwvdrmengine.so', 'vendor/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/lib64/libvidhance.so': blob_fixup()
+        .add_needed('libcomparetf2_shim.so')
+        .add_needed('libdemangle.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
