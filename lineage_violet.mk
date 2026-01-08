@@ -22,6 +22,7 @@ AXION_MAINTAINER := Joker-V2
 AXION_PROCESSOR := Qualcomm_Snapdragon_675
 BYPASS_CHARGE_SUPPORTED := true
 TARGET_ENABLE_BLUR := true
+LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_violet
