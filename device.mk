@@ -28,6 +28,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Add common definitions for Qualcomm
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
+# Inherit from dolby
+$(call inherit-product-if-exists, vendor/oneplus/dolby/oplusdolby.mk)
+
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 28
 
