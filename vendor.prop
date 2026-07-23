@@ -197,6 +197,15 @@ persist.dbg.wfc_avail_ovr=1
 persist.log.tag.QC2Buf=W
 persist.log.tag.QC2V4l2Codec=E
 
+# Low Memory Killer
+ro.lmk.downgrade_pressure=60
+ro.lmk.kill_timeout_ms=100
+ro.lmk.psi_complete_stall_ms=150
+ro.lmk.swap_free_low_percentage=20
+ro.lmk.swap_util_max=90
+ro.lmk.thrashing_limit=30
+ro.lmk.thrashing_limit_decay=50
+
 # Media
 debug.stagefright.c2inputsurface=-1
 
