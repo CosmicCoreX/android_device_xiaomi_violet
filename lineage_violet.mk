@@ -15,6 +15,9 @@ $(call inherit-product, device/xiaomi/violet/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit MiuiCamera
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+
 # AxionAOSP
 AXION_CAMERA_REAR_INFO := 48,5
 AXION_CAMERA_FRONT_INFO := 13
