@@ -18,15 +18,16 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit MiuiCamera
 $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
-# AxionAOSP
-AXION_CAMERA_REAR_INFO := 48,5
-AXION_CAMERA_FRONT_INFO := 13
-AXION_MAINTAINER := Joker-V2
-AXION_PROCESSOR := Qualcomm_Snapdragon_675
-BYPASS_CHARGE_SUPPORTED := true
+#$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+LUNARIS_BUILD_TYPE := UNOFFICIAL
+SURFACE_FLINGER_BOOST := true
 TARGET_ENABLE_BLUR := true
-TARGET_USES_DOLBY := true
-LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
+TARGET_USE_MAPS := true
+TARGET_USE_FILES := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+#GMS
+WITH_GMS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_violet

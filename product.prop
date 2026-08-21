@@ -1,2 +1,5 @@
 # eBPF
 ro.bpf.kver_override=5.10.239
+
+# Lunaris Maintainer
+ro.lunaris.maintainer=Z E U S
