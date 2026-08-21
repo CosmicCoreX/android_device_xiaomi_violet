@@ -69,6 +69,11 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libvidhance.so': blob_fixup()
         .add_needed('libcomparetf2_shim.so')
         .add_needed('libdemangle.so'),
+    'vendor/lib64/camera/components/com.vidhance.node.eis.so':
+        blob_fixup().add_needed('libdemangle.so')
+                    .add_needed('libcomparetf2_shim.so'),
+    'vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so':
+        blob_fixup().add_needed('libcomparetf2_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
