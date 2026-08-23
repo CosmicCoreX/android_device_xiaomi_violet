@@ -74,6 +74,8 @@ blob_fixups: blob_fixups_user_type = {
                     .add_needed('libcomparetf2_shim.so'),
     'vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so':
         blob_fixup().add_needed('libcomparetf2_shim.so'),
+    'vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so': blob_fixup()
+        .binary_regex_replace(b'\xdb\x0a\x00\xb4', b'\x56\x00\x00\x14'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
