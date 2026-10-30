@@ -13,6 +13,9 @@ ro.surface_flinger.has_wide_color_display=true
 # FUSE
 persist.sys.fuse.passthrough.enable=true
 
+# Kawase2 Render Engine Blur Algorithm
+debug.renderengine.blur_algorithm=kawase2
+
 # LMKD
 ro.config.low_ram=false
 ro.lmk.log_stats=true
