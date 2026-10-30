@@ -27,7 +27,7 @@ TARGET_USE_FILES := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
 #GMS
-WITH_GMS := true
+WITH_GMS := false
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_violet
